@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  # api-gateway:
+  #   container_name: 'demo-api-gateway'
+  #   build:
+  #     context: ./demo-api-gateway
+  #     dockerfile: ./demo-api-gateway/Dockerfile
+  #   ports:
+  #     - '5001:80'
+  # post-service:
+  #   container_name: 'demo-post-service'
+  #   build:
+  #     context: ./micro-services/post-service
+  #   ports:
+  #     - '7071:7071'
+
+  mongodb:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/apps/mongo:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root

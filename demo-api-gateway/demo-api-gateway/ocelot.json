@@ -1,0 +1,126 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/post-create",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["POST"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7071
+        }
+      ],
+      "UpstreamPathTemplate": "/post",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/post-read",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["GET"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7071
+        }
+      ],
+      "UpstreamPathTemplate": "/post",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/post-update?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["PUT"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7071
+        }
+      ],
+      "UpstreamPathTemplate": "/post/{id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/post-delete?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["DELETE"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7071
+        }
+      ],
+      "UpstreamPathTemplate": "/post/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+
+
+
+
+    {
+      "DownstreamPathTemplate": "/api/user-create",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["POST"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7070
+        }
+      ],
+      "UpstreamPathTemplate": "/user",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/user-read",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["GET"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7070
+        }
+      ],
+      "UpstreamPathTemplate": "/user",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/user-update?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["PUT"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7070
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/user-delete?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamMethod": ["DELETE"],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7070
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    }
+
+
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7032"
+  }
+}
